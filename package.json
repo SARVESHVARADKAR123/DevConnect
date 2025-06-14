@@ -1,0 +1,31 @@
+{
+  "name": "devconnect",
+  "version": "1.0.0",
+  "description": "A platform for developers to connect and collaborate on projects",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm run dev",
+    "install:all": "npm install && npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "developer",
+    "collaboration",
+    "projects",
+    "social",
+    "platform"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+} 
